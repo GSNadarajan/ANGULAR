@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm i
+    build:
+      commands:
+        - npm run ng build
+  artifacts:
+    baseDirectory: dist/dasboard #updated the path
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+  
